@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="Styles/main.css" />
+
+<head>
+    <title>Bingo</title>
+    <script src="https://kit.fontawesome.com/5f7171e3f3.js" crossorigin="anonymous"></script>
+</head>
+
+    <div class="grid-container" id="grid-container">
+        <div class="grid-item" id="A" onclick="switcher()"><i class="fa-solid fa-house-chimney"></i><p>Home</p></div>
+        <div class="grid-item" id="B" onclick="switcher1()"><i class="fa-solid fa-plate-wheat"></i><p>Word of Wisdom</p></div>
+        <div class="grid-item" id="C" onclick="switcher2()"><i class="fa-solid fa-heart"></i><p>Love</p></div>
+        <div class="grid-item" id="D" onclick="switcher3()"><i class="fa-solid fa-clock"></i><p>Time</p></div> 
+        <div class="grid-item" id="E" onclick="switcher4()"><i class="fa-solid fa-user-group"></i><p>Missionaries</p></div>
+        <div class="grid-item" id="F" onclick="switcher5()"><i class="fa-solid fa-user-group"></i><p>Marriage</p></div>
+        <div class="grid-item" id="G" onclick="switcher6()"><i class="fa-solid fa-people-group"></i><p>Pioneers</p></div>
+        <div class="grid-item" id="H" onclick="switcher7()"><i class="fa-solid fa-person-dress"></i><p>Women</p></div>
+        <div class="grid-item" id="I" onclick="switcher8()"><i class="fa-solid fa-person-digging"></i><p>Work</p></div>
+        <div class="grid-item" id="J" onclick="switcher9()"><i class="fa-solid fa-book"></i><p>Book of Mormon</p></div>
+        <div class="grid-item" id="K" onclick="switcher10()"><i class="fa-solid fa-face-smile"></i><p>Joseph Smith</p></div>
+        <div class="grid-item" id="L" onclick="switcher11()"><i class="fa-solid fa-face-smile"></i><p>Jesus</p></div>
+        <div class="grid-item" id="M" onclick="switcher12()">Free</div>
+        <div class="grid-item" id="N" onclick="switcher13()"><i class="fa-solid fa-book-open"></i><p>Scriptures</p></div>
+        <div class="grid-item" id="O" onclick="switcher14()"><i class="fa-solid fa-sack-dollar"></i><p>Tithing</p></div>
+        <div class="grid-item" id="P" onclick="switcher15()"><i class="fa-solid fa-music"></i><p>Music</p></div>
+        <div class="grid-item" id="Q" onclick="switcher16()"><i class="fa-solid fa-church"></i><p>Temple</p></div>
+        <div class="grid-item" id="R" onclick="switcher17()"><i class="fa-solid fa-sitemap"></i><p>Genealogy</p></div>
+        <div class="grid-item" id="S" onclick="switcher18()"><i class="fa-solid fa-synagogue"></i><p>Sabbath Day Holy</p></div>
+        <div class="grid-item" id="T" onclick="switcher19()"><i class="fa-solid fa-people-roof"></i><p>Family</p></div>
+        <div class="grid-item" id="U" onclick="switcher20()"><i class="fa-solid fa-people-roof"></i><p>FHE</p></div>
+        <div class="grid-item" id="V" onclick="switcher21()"><i class="fa-solid fa-handshake-angle"></i><p>Service</p></div>
+        <div class="grid-item" id="W" onclick="switcher22()"><i class="fa-solid fa-signature"></i><p>Journal</p></div>         
+        <div class="grid-item" id="X" onclick="switcher23()"><i class="fa-solid fa-face-smile"></i><p>Fathers</p></div>
+        <div class="grid-item" id="Y" onclick="switcher24()"><i class="fa-solid fa-person-praying"></i><p>Prayers</p></div>
+    </div>
+
+    <div class="score" id="score">Bingos: <a id="sum"></a></div>
+    <div class="counter" id="counter">
+        <div class="add" id="add" onclick="add()"><i class="fa-solid fa-plus"></i></div>
+        <div class="subtract" id="subtract" onclick="subtract()"><i class="fa-solid fa-minus"></i></div>
+    </div>
+    <div class="clear" id="clear" onclick="clr()">Clear</div>
+
+<script src="Scripts/main.js"></script>
+
+</body>
+</html>
