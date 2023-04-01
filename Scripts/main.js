@@ -132,16 +132,11 @@ class ClassSwitch {
     switcher() {
         const innerFunc = () => {
             window[nums[this.numbs]] += 1;
+            let elem = document.getElementById(this.letter)
             if (window[nums[this.numbs]] % 2 === 0) {
-                let elem = document.getElementById(this.letter)
-                // elem.style.color = "whitesmoke";
                 elem.classList.toggle('hover')
             } else {
-                let elem = document.getElementById(this.letter)
-                // elem.style.color = 'rgb(255, 5, 192)';
-                window[nums[this.numbs]] = 1;
                 elem.classList.toggle('hover')
-                console.log(window[nums[this.numbs]])
             }    
             setScoreCookie(); // Update the score cookie
         }
