@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Bingo2</title>
-    <link rel="stylesheet" type="text/css" href="/Styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/main.css" />
     <script src="https://kit.fontawesome.com/5f7171e3f3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,7 +50,17 @@
     </div>
     <div class="clear" id="clear" onclick="clr()">Clear</div>
 
-<script src="/Scripts/main.js"></script>
+    <!-- Chat Gpt -->
+    <div id="note-form">
+        <textarea id="note-textarea"></textarea>
+        <div class="button-container">
+            <button class="btn-note" id="note-add-button">Add Note</button>
+            <button class="btn-note" id="note-collapse-button">Collapse</button>
+            <button class="btn-note" id="note-copy-button">Copy</button>
+        </div>
+    </div>
+    <ul id="note-list"></ul>
+<script src="../Scripts/main.js"></script>
 
 </body>
 </html>
