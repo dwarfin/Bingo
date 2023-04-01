@@ -1,4 +1,5 @@
 var score = 0;
+var sel = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 function add() {
     score += 1;
@@ -11,80 +12,12 @@ function subtract() {
 }
 
 function clr() {
-    document.querySelector('#A').style.color = 'whitesmoke';
-    num = 0;
-
-    document.querySelector('#B').style.color = 'whitesmoke';
-    num1 = 0;
-
-    document.querySelector('#C').style.color = 'whitesmoke';
-    num2 = 0;
-
-    document.querySelector('#D').style.color = 'whitesmoke';
-    num3 = 0;
-
-    document.querySelector('#E').style.color = 'whitesmoke';
-    num4 = 0;
-
-    document.querySelector('#F').style.color = 'whitesmoke';
-    num5 = 0;
-
-    document.querySelector('#G').style.color = 'whitesmoke';
-    num6 = 0;
-
-    document.querySelector('#H').style.color = 'whitesmoke';
-    num7 = 0;
-
-    document.querySelector('#I').style.color = 'whitesmoke';
-    num8 = 0;
-
-    document.querySelector('#J').style.color = 'whitesmoke';
-    num9 = 0;
-
-    document.querySelector('#K').style.color = 'whitesmoke';
-    num10 = 0;
-
-    document.querySelector('#L').style.color = 'whitesmoke';
-    num11 = 0;
-
-    document.querySelector('#M').style.color = 'whitesmoke';
-    num12 = 0;
-
-    document.querySelector('#N').style.color = 'whitesmoke';
-    num13 = 0;
-
-    document.querySelector('#O').style.color = 'whitesmoke';
-    num14 = 0;
-
-    document.querySelector('#P').style.color = 'whitesmoke';
-    num15 = 0;
-
-    document.querySelector('#Q').style.color = 'whitesmoke';
-    num16 = 0;
-
-    document.querySelector('#R').style.color = 'whitesmoke';
-    num17 = 0;
-
-    document.querySelector('#S').style.color = 'whitesmoke';
-    num18 = 0;
-
-    document.querySelector('#T').style.color = 'whitesmoke';
-    num19 = 0;
-
-    document.querySelector('#U').style.color = 'whitesmoke';
-    num20 = 0;
-
-    document.querySelector('#V').style.color = 'whitesmoke';
-    num21 = 0;
-
-    document.querySelector('#W').style.color = 'whitesmoke';
-    num22 = 0;
-
-    document.querySelector('#X').style.color = 'whitesmoke';
-    num23 = 0;
-
-    document.querySelector('#Y').style.color = 'whitesmoke';
-    num24 = 0;
+    var counter = 0
+    for (let i of sel) {
+      document.querySelector(`#${i}`).style.color = 'whitesmoke'
+      window[nums[counter]] = 0;
+      counter += 1
+    }
 }
 
 let num = 0;
