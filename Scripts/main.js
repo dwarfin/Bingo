@@ -10,11 +10,20 @@ const noteCopyButton = document.getElementById("note-copy-button");
 const noteList = document.getElementById("note-list");
 const notes = [];
 
+
+// Read notes from cookie and render on page
+const storedNotes = getNotesFromCookie();
+if (storedNotes) {
+  notes.push(...storedNotes);
+  renderNotes();
+}
+
 noteAddButton.addEventListener("click", () => {
   const noteText = noteTextarea.value.trim();
   if (noteText !== "") {
     notes.push(noteText);
     noteTextarea.value = "";
+    setNotesCookie(notes); // Update the notes cookie
     renderNotes();
   }
 });
@@ -41,19 +50,64 @@ function renderNotes() {
   });
 }
 
+// Cookie functions
+function getNotesFromCookie() {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("notes="));
+  if (cookieValue) {
+    const notesString = cookieValue.split("=")[1];
+    return JSON.parse(notesString);
+  } else {
+    return null;
+  }
+}
+
+function setNotesCookie(notes) {
+  const notesString = JSON.stringify(notes);
+  const cookieString = `notes=${notesString}`;
+  document.cookie = cookieString;
+}
+
+
+
 
 
 // Add function
 
+var score = getScoreFromCookie() || 0; // Read score from cookie or set to 0 if cookie is not present
+
+const sumElement = document.getElementById("sum");
+sumElement.innerHTML = score;
+
+function getScoreFromCookie() {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("score="));
+  if (cookieValue) {
+    return Number(cookieValue.split("=")[1]);
+  } else {
+    return null;
+  }
+}
+
+function setScoreCookie() {
+  const cookieString = `score=${score}`;
+  document.cookie = cookieString;
+}
+
+// Add function
 function add() {
     score += 1;
-    document.getElementById('sum').innerHTML = score;
+    sumElement.innerHTML = score;
     document.style.color = 'white';
+    setScoreCookie(); // Update the score cookie
 }
 
 function subtract() {
     score -= 1;
-    document.getElementById('sum').innerHTML = score;
+    sumElement.innerHTML = score;
+    setScoreCookie(); // Update the score cookie
 }
 
 function clr() {
@@ -66,6 +120,7 @@ function clr() {
         window[nums[counter]] = 0;
         counter += 1;
     }
+    setScoreCookie(); // Update the score cookie
 }
 
 class ClassSwitch {
@@ -87,7 +142,8 @@ class ClassSwitch {
                 window[nums[this.numbs]] = 1;
                 elem.classList.toggle('hover')
                 console.log(window[nums[this.numbs]])
-            }
+            }    
+            setScoreCookie(); // Update the score cookie
         }
         innerFunc()
     }
