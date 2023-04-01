@@ -1,0 +1,181 @@
+/* General Styles */
+* {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Grid Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgba(1, 255, 200, 0.8);
+  padding: 1.2em;
+  font-size: 1.2em;
+  text-align: center;
+  color: whitesmoke;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Score Styles */
+.hover {
+    color: rgb(255, 5, 192);
+}
+
+.score {
+  color: whitesmoke;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.clear {
+  margin-left: 10px;
+  color: whitesmoke;
+  font-size: 25px;
+  background-color: black;
+  display: inline-block;
+}
+
+.counter {
+  color: whitesmoke;
+  padding: 10px;
+}
+
+.nums {
+  float: right;
+}
+
+/* Button Styles */
+.add,
+.subtract {
+  font-size: 30px;
+  display: inline-block;
+}
+
+.add:hover,
+.subtract:hover,
+#clear:hover,
+#A:hover,
+#B:hover,
+#C:hover,
+#D:hover,
+#E:hover,
+#F:hover,
+#G:hover,
+#H:hover,
+#I:hover,
+#J:hover,
+#K:hover,
+#L:hover,
+#N:hover,
+#O:hover,
+#P:hover,
+#A:hover,
+#Q:hover,
+#R:hover,
+#S:hover,
+#T:hover,
+#U:hover,
+#V:hover,
+#W:hover,
+#X:hover,
+#Y:hover {
+  color: rgb(255, 5, 192);
+}
+
+#M {
+    font-size: 1.5em;
+    padding: auto;
+    color: rgb(255, 5, 192);
+}
+
+/* Chat gpt */
+/* Notes */
+#note-form {
+    margin-top: 5%;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn-note {
+    text-decoration: none;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(1, 255, 200, 0.8);
+    outline: none;
+    transition: 0.2s all;
+}
+  
+.btn-note:active {
+    transform: scale(0.80);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#note-form button {
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+#note-list {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#note-textarea {
+    margin: 1em;
+    resize: none;
+    background-color: whitesmoke;
+}
+
+#note-textarea:focus {
+    border-color: rgba(1, 255, 200, 0.8);
+    outline: none;
+}
+
+#note-textarea.collapsed {
+    height: 30px;
+}
+  
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(5, minmax(80px, 1fr));
+      padding: 5px;
+    }
+    
+    .grid-item {
+      padding: 0.8em;
+      font-size: 0.8em;
+      align-items: center;
+      justify-content: center;
+      overflow-wrap: break-word;
+    }
+    
+    .score {
+      font-size: 20px;
+    }
+    
+    .clear {
+      font-size: 20px;
+    }
+    
+    .add,
+    .subtract {
+      font-size: 20px;
+    }
+  }

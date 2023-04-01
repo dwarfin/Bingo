@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-
-<link rel="stylesheet" type="text/css" href="Styles/main.css" />
-
 <head>
-    <title>Bingo</title>
+    <title>Bingo3</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/main.css"/>
     <script src="https://kit.fontawesome.com/5f7171e3f3.js" crossorigin="anonymous"></script>
-</head>
 
+    <style>
+        * {
+            background-color: lightskyblue;
+        }
+        .grid-item {
+            background-color: lightskyblue;
+            border: 1px solid rgba(225, 255, 1, 0.8);
+        }
+    </style>
+</head>
+<body>
     <div class="grid-container" id="grid-container">
-        <div class="grid-item" id="A" onclick="switcher()"><i class="fa-solid fa-house-chimney"></i><p>Home</p></div>
-        <div class="grid-item" id="B" onclick="switcher1()"><i class="fa-solid fa-plate-wheat"></i><p>Word of Wisdom</p></div>
-        <div class="grid-item" id="C" onclick="switcher2()"><i class="fa-solid fa-heart"></i><p>Love</p></div>
-        <div class="grid-item" id="D" onclick="switcher3()"><i class="fa-solid fa-clock"></i><p>Time</p></div> 
-        <div class="grid-item" id="E" onclick="switcher4()"><i class="fa-solid fa-user-group"></i><p>Missionaries</p></div>
-        <div class="grid-item" id="F" onclick="switcher5()"><i class="fa-solid fa-user-group"></i><p>Marriage</p></div>
-        <div class="grid-item" id="G" onclick="switcher6()"><i class="fa-solid fa-people-group"></i><p>Pioneers</p></div>
-        <div class="grid-item" id="H" onclick="switcher7()"><i class="fa-solid fa-person-dress"></i><p>Women</p></div>
-        <div class="grid-item" id="I" onclick="switcher8()"><i class="fa-solid fa-person-digging"></i><p>Work</p></div>
-        <div class="grid-item" id="J" onclick="switcher9()"><i class="fa-solid fa-book"></i><p>Book of Mormon</p></div>
-        <div class="grid-item" id="K" onclick="switcher10()"><i class="fa-solid fa-face-smile"></i><p>Joseph Smith</p></div>
-        <div class="grid-item" id="L" onclick="switcher11()"><i class="fa-solid fa-face-smile"></i><p>Jesus</p></div>
-        <div class="grid-item" id="M" onclick="switcher12()">Free</div>
-        <div class="grid-item" id="N" onclick="switcher13()"><i class="fa-solid fa-book-open"></i><p>Scriptures</p></div>
-        <div class="grid-item" id="O" onclick="switcher14()"><i class="fa-solid fa-sack-dollar"></i><p>Tithing</p></div>
-        <div class="grid-item" id="P" onclick="switcher15()"><i class="fa-solid fa-music"></i><p>Music</p></div>
-        <div class="grid-item" id="Q" onclick="switcher16()"><i class="fa-solid fa-church"></i><p>Temple</p></div>
-        <div class="grid-item" id="R" onclick="switcher17()"><i class="fa-solid fa-sitemap"></i><p>Genealogy</p></div>
-        <div class="grid-item" id="S" onclick="switcher18()"><i class="fa-solid fa-synagogue"></i><p>Sabbath Day Holy</p></div>
-        <div class="grid-item" id="T" onclick="switcher19()"><i class="fa-solid fa-people-roof"></i><p>Family</p></div>
-        <div class="grid-item" id="U" onclick="switcher20()"><i class="fa-solid fa-people-roof"></i><p>FHE</p></div>
-        <div class="grid-item" id="V" onclick="switcher21()"><i class="fa-solid fa-handshake-angle"></i><p>Service</p></div>
-        <div class="grid-item" id="W" onclick="switcher22()"><i class="fa-solid fa-signature"></i><p>Journal</p></div>         
-        <div class="grid-item" id="X" onclick="switcher23()"><i class="fa-solid fa-face-smile"></i><p>Fathers</p></div>
-        <div class="grid-item" id="Y" onclick="switcher24()"><i class="fa-solid fa-person-praying"></i><p>Prayers</p></div>
+        <tr>
+            <td><div class="grid-item" id="A" onclick="createObj('A', 0).switcher()"><i class="fa-solid fa-house-chimney"></i><p>Home</p></div></td>
+            <td><div class="grid-item" id="B" onclick="createObj('B', 1).switcher()"><i class="fa-solid fa-plate-wheat"></i><p>Word of Wisdom</p></div></td>
+            <td><div class="grid-item" id="C" onclick="createObj('C', 2).switcher()"><i class="fa-solid fa-heart"></i><p>Love</p></div></td>
+            <td><div class="grid-item" id="D" onclick="createObj('D', 3).switcher()"><i class="fa-solid fa-clock"></i><p>Time</p></div></td>
+            <td><div class="grid-item" id="E" onclick="createObj('E', 4).switcher()"><i class="fa-solid fa-user-group"></i><p>Missionaries</p></div></td>
+        </tr>
+        <tr>
+            <td><div class="grid-item" id="F" onclick="createObj('F', 5).switcher()"><i class="fa-solid fa-user-group"></i></i><p>Marriage</p></div></td>
+            <td><div class="grid-item" id="G" onclick="createObj('G', 6).switcher()"><i class="fa-solid fa-people-group"></i><p>Pioneers</p></div></td>
+            <td><div class="grid-item" id="H" onclick="createObj('H', 7).switcher()"><i class="fa-solid fa-person-dress"></i><p>Women</p></div></td>
+            <td><div class="grid-item" id="I" onclick="createObj('I', 8).switcher()"><i class="fa-solid fa-person-digging"></i><p>Work</p></div></td>
+            <td><div class="grid-item" id="J" onclick="createObj('J', 9).switcher()"><i class="fa-solid fa-book"></i><p>Book of Mormon</p></div></td>
+        </tr>
+        <tr>
+            <td><div class="grid-item" id="K" onclick="createObj('K', 10).switcher()"><i class="fa-solid fa-face-smile"></i><p>Joseph Smith</p></div></td>
+            <td><div class="grid-item" id="L" onclick="createObj('L', 11).switcher()"><i class="fa-solid fa-face-smile"></i><p>Jesus</p></div></td>
+            <td><div class="grid-item" id="M" onclick="createObj('M', 12).switcher()">Free</div></td>
+            <td><div class="grid-item" id="N" onclick="createObj('N', 13).switcher()"><i class="fa-solid fa-book-open"></i><p>Scriptures</p></div></td>
+            <td><div class="grid-item" id="O" onclick="createObj('O', 14).switcher()"><i class="fa-solid fa-sack-dollar"></i><p>Tithing</p></div></td>
+        </tr>    
+        <tr>
+            <td><div class="grid-item" id="P" onclick="createObj('P', 15).switcher()"><i class="fa-solid fa-music"></i><p>Music</p></div></td>
+            <td><div class="grid-item" id="Q" onclick="createObj('Q', 16).switcher()"><i class="fa-solid fa-church"></i><p>Temple</p></div></td>
+            <td><div class="grid-item" id="R" onclick="createObj('R', 17).switcher()"><i class="fa-solid fa-sitemap"></i><p>Genealogy</p></div></td>
+            <td><div class="grid-item" id="S" onclick="createObj('S', 18).switcher()"><i class="fa-solid fa-synagogue"></i><p>Sabbath Day Holy</p></div></td>
+            <td><div class="grid-item" id="T" onclick="createObj('T', 19).switcher()"><i class="fa-solid fa-people-roof"></i><p>Family</p></div></td>
+        </tr>
+        <tr>
+            <td><div class="grid-item" id="U" onclick="createObj('U', 20).switcher()"><i class="fa-solid fa-people-roof"></i><p>FHE</p></div></td>
+            <td><div class="grid-item" id="V" onclick="createObj('V', 21).switcher()"><i class="fa-solid fa-handshake-angle"></i><p>Service</p></div></td>
+            <td><div class="grid-item" id="W" onclick="createObj('W', 22).switcher()"><i class="fa-solid fa-signature"></i><p>Journal</p></div></td>
+            <td><div class="grid-item" id="X" onclick="createObj('X', 23).switcher()"><i class="fa-solid fa-face-smile"></i><p>Fathers</p></div></td>
+            <td><div class="grid-item" id="Y" onclick="createObj('Y', 24).switcher()"><i class="fa-solid fa-person-praying"></i><p>Prayers</p></div></td>
+        </tr>
     </div>
 
     <div class="score" id="score">Bingos: <a id="sum"></a></div>
@@ -42,7 +60,7 @@
     </div>
     <div class="clear" id="clear" onclick="clr()">Clear</div>
 
-<script src="Scripts/main.js"></script>
+<script src="/Scripts/main.js"></script>
 
 </body>
 </html>
