@@ -188,8 +188,9 @@
   }
 
   #note-textarea.collapsed {
-    color: transparent;
-    background-color: transparent;
+    /* color: transparent;
+    background-color: transparent; */
+    height: 0px;
     border: none;
   }
 }
