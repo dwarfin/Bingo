@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+    <!-- Tithing = Atonement, Genealogy = Ancestry, Sabbath Day Holy = Gospel, Word of Wisdom = Commandments, Journal = Spirit, Pioneers = Prophet-->
     <div class="grid-container" id="grid-container">
         <tr>
             <td><div class="grid-item" id="A" onclick="createObj('A', 0).switcher()"><i class="fa-solid fa-face-smile"></i><p>Fathers</p></div></td>
@@ -27,7 +28,7 @@
             <td><div class="grid-item" id="F" onclick="createObj('F', 5).switcher()"><i class="fa-solid fa-heart"></i><p>Love</p></div></td>
             <td><div class="grid-item" id="G" onclick="createObj('G', 6).switcher()"><i class="fa-solid fa-church"></i><p>Temple</p></div></td>
             <td><div class="grid-item" id="H" onclick="createObj('H', 7).switcher()"><i class="fa-solid fa-sitemap"></i><p>Genealogy</p></div></td>
-            <td><div class="grid-item" id="I" onclick="createObj('I', 8).switcher()"><i class="fa-solid fa-people-roof"></i><p>FHE</p></div></td>
+            <td><div class="grid-item" id="I" onclick="createObj('I', 8).switcher()"><i class="fa-solid fa-people-roof"></i><p>Ministry</p></div></td>
             <td><div class="grid-item" id="J" onclick="createObj('J', 9).switcher()"><i class="fa-solid fa-signature"></i><p>Joseph Smith</p></div></td>
         </tr>
         <tr>
@@ -69,7 +70,9 @@
             <button class="btn-note" id="note-copy-button">Copy</button>
         </div>
     </div>
-    <ul id="note-list"></ul>
+    <div id="note-display">
+        <ul id="note-list"></ul>
+    </div>
 <script src="../Scripts/main.js"></script>
 
 </body>
